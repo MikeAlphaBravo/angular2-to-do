@@ -13,7 +13,7 @@ import { Task } from './task.model';
       <li (click)="isDone(currentTask)" *ngFor="let currentTask of childTaskList | completeness:filterByCompleteness">{{currentTask.description}} {{currentTask.priority}}
         <input *ngIf="currentTask.done === true" type="checkbox" checked (click)="toggleDone(currentTask, false)"/>
         <input *ngIf="currentTask.done === false" type="checkbox" (click)="toggleDone(currentTask, true)"/>
-        <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button>
+        <button (click)="editTask(currentTask)">Edit!</button>
       </li>
     </ul>
   `
